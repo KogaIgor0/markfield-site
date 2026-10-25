@@ -154,6 +154,26 @@ footer{border-top:1px solid var(--borda);padding:32px 24px;text-align:center;col
       <div class="destaque"><p>💡 Ao tocar em qualquer elemento do KML no mapa, um card aparece com o <strong>código, tipo, coordenadas e distância</strong> até você. Use o botão <strong>"Ir até o local"</strong> para navegar até ele.</p></div>
     </section>
 
+    <!-- 2b. BDGD -->
+    <section class="secao" id="bdgd">
+      <h2>2b. Rede BDGD (sem arquivo)</h2>
+      <p class="subtitulo">Carregue a rede MT da distribuidora direto do app, sem precisar de KML</p>
+      <p>A BDGD (Base de Dados Geográfica da Distribuidora) é publicada anualmente pela ANEEL e contém toda a rede de Média Tensão do Brasil. O Markfield permite carregar qualquer alimentador dessas redes direto no mapa, como camada de referência para o seu projeto.</p>
+      <div class="passo"><div class="num">1</div><div class="txt">Toque no botão <strong>BDGD</strong> na barra lateral</div></div>
+      <div class="passo"><div class="num">2</div><div class="txt">Selecione a <strong>distribuidora</strong> (ex.: Elektro, CEMIG, CPFL Paulista)</div></div>
+      <div class="passo"><div class="num">3</div><div class="txt">Selecione a <strong>subestação</strong> e depois o <strong>alimentador (CTMT)</strong></div></div>
+      <div class="passo"><div class="num">4</div><div class="txt">As linhas MT e transformadores daquele alimentador aparecem no mapa em laranja</div></div>
+      <h3>Distribuidoras disponíveis (23)</h3>
+      <p>Elektro, CEMIG, CPFL Paulista, CPFL Piratininga, Enel SP, Copel, Coelba, Equatorial PA/MA/PI/AL/GO, CEEE, CEA, Energisa MT/MS/TO/PB/SE/MG-Rio/Sul/RO/AC.</p>
+      <div class="destaque"><p>⏳ <strong>Em breve:</strong> Light (RJ), Enel RJ, Neoenergia PE / CE / DF / RN e outras ~12 distribuidoras estão sendo processadas e serão adicionadas nas próximas atualizações.</p></div>
+      <h3>Camadas da BDGD</h3>
+      <ul>
+        <li><strong>Linhas MT</strong> — traçado da rede de Média Tensão do alimentador selecionado</li>
+        <li><strong>Transformadores</strong> — posição dos transformadores do alimentador</li>
+      </ul>
+      <p>Para mostrar ou ocultar cada camada, use o painel de <strong>Camadas</strong> no mapa.</p>
+    </section>
+
     <!-- 3. PROJETO -->
     <section class="secao" id="projeto">
       <h2>3. Criando um projeto</h2>
@@ -201,10 +221,14 @@ footer{border-top:1px solid var(--borda);padding:32px 24px;text-align:center;col
 
       <h3>Tipos de marcador</h3>
       <ul>
-        <li><strong>Poste proposto</strong> — círculo âmbar, metade preenchida. Padrão do projeto.</li>
-        <li><strong>Genérico</strong> — gota âmbar. Para pontos sem tipo definido.</li>
+        <li><strong>Poste Circular Proposto</strong> — círculo âmbar, metade preenchida. Padrão do projeto.</li>
+        <li><strong>Poste Circular Existente</strong> — anel duplo (dois círculos concêntricos). Para postes já implantados.</li>
+        <li><strong>Poste Duplo T Proposto</strong> — quadrado âmbar com triângulos preenchidos (hachura X). Para postes DT a implantar.</li>
+        <li><strong>Poste Duplo T Existente</strong> — quadrado com X (diagonais), sem preenchimento. Para postes DT já no local.</li>
         <li><strong>Transformador</strong> — triângulo ciano com a ponta para baixo. A ponta indica o ponto geográfico exato.</li>
+        <li><strong>Genérico</strong> — gota âmbar. Para pontos sem tipo definido (não aceita trecho de rede).</li>
       </ul>
+      <div class="destaque"><p>💡 Todos os tipos de poste (Circular e Duplo T, Proposto e Existente) podem ser pontas de um trecho de rede.</p></div>
     </section>
 
     <!-- 5. TRECHO -->
@@ -220,7 +244,7 @@ footer{border-top:1px solid var(--borda);padding:32px 24px;text-align:center;col
       <div class="passo"><div class="num">2</div><div class="txt">Toque nos pontos <strong>na ordem</strong> em que a rede vai passar — eles ficam <strong>azuis</strong> ao ser selecionados</div></div>
       <div class="passo"><div class="num">3</div><div class="txt">Toque em <strong>"Criar linha (N)"</strong> para confirmar o trecho</div></div>
 
-      <div class="destaque"><p>💡 O transformador pode ser ponta de trecho, inclusive <strong>no meio da sequência</strong> (ex.: poste → transformador → poste). Só pontos Genéricos não aceitam trecho.</p></div>
+      <div class="destaque"><p>💡 O transformador pode ser ponta de trecho, inclusive <strong>no meio da sequência</strong> (ex.: poste → transformador → poste). Todos os tipos de poste (Circular e Duplo T, Proposto e Existente) aceitam trecho. Só pontos <strong>Genéricos</strong> não aceitam.</p></div>
     </section>
 
     <!-- 6. LINHA LIVRE -->
@@ -235,6 +259,19 @@ footer{border-top:1px solid var(--borda);padding:32px 24px;text-align:center;col
       <div class="passo"><div class="num">1</div><div class="txt">No drawer, toque em <strong>"Linha livre"</strong> e escolha o estilo: Cerca, Contínua, Ponto-traço</div></div>
       <div class="passo"><div class="num">2</div><div class="txt">Toque nos pontos do mapa para traçar a linha. A linha aparece em tempo real conforme você avança</div></div>
       <div class="passo"><div class="num">3</div><div class="txt">Toque em <strong>"Concluir"</strong> para finalizar</div></div>
+    </section>
+
+    <!-- 6b. NOTAS DE CAMPO -->
+    <section class="secao" id="notas">
+      <h2>6b. Notas de campo</h2>
+      <p class="subtitulo">Observações em texto ou voz, salvas no projeto com coordenada</p>
+      <p>Com um projeto conectado, toque em <strong>"Nota de campo"</strong> no drawer e toque no ponto do mapa onde deseja registrar a observação. Um marcador laranja aparece no local e a nota fica salva junto ao projeto.</p>
+      <div class="passo"><div class="num">1</div><div class="txt">Conecte um projeto e toque em <strong>"Nota de campo"</strong> no drawer</div></div>
+      <div class="passo"><div class="num">2</div><div class="txt">Toque no mapa para posicionar a nota</div></div>
+      <div class="passo"><div class="num">3</div><div class="txt">Digite o texto ou toque no botão de microfone para <strong>ditar por voz</strong> (pt-BR)</div></div>
+      <div class="passo"><div class="num">4</div><div class="txt">Toque em <strong>"Salvar"</strong></div></div>
+      <p>As notas aparecem no mapa como marcadores laranjas. Para ver todas as notas em lista, abra a tela de itens do projeto. Para excluir, toque na nota e confirme a exclusão.</p>
+      <div class="destaque"><p>💡 Para mostrar ou ocultar os marcadores de notas no mapa, use o painel de <strong>Camadas</strong> e alterne o toggle "Notas de campo".</p></div>
     </section>
 
     <!-- 7. MEDICAO -->
@@ -275,7 +312,7 @@ footer{border-top:1px solid var(--borda);padding:32px 24px;text-align:center;col
         <li><strong>Exportar tudo (ZIP)</strong> — todos os formatos num arquivo só</li>
       </ul>
 
-      <div class="destaque"><p>💡 O DXF já sai com as <strong>camadas separadas</strong> (POSTE_PROPOSTO, TRANSFORMADOR, REFERENCIA) e com o <strong>ponto de referência</strong> da rede existente mais próxima — pronto para abrir no AutoCAD sem ajustes.</p></div>
+      <div class="destaque"><p>💡 O DXF já sai com as <strong>camadas separadas por tipo de poste</strong> (POSTE_CIRCULAR_PROPOSTO, POSTE_DUPLO_T_PROPOSTO, POSTE_CIRCULAR_EXISTENTE, POSTE_DUPLO_T_EXISTENTE, TRANSFORMADOR, REFERENCIA) e com o <strong>ponto de referência</strong> da rede existente mais próxima — pronto para abrir no AutoCAD sem ajustes.</p></div>
     </section>
 
     <!-- 9. OBRA -->
@@ -337,8 +374,18 @@ footer{border-top:1px solid var(--borda);padding:32px 24px;text-align:center;col
       <p class="subtitulo">O que vem em cada camada e como usar o ponto de referência</p>
 
       <h3>Camadas do arquivo DXF</h3>
+      <h4>Postes propostos — cor amarela (2)</h4>
       <ul>
-        <li><strong>POSTE_PROPOSTO</strong> — cor amarela (2). Postes marcados como "Poste proposto"</li>
+        <li><strong>POSTE_CIRCULAR_PROPOSTO</strong> — Poste Circular Proposto</li>
+        <li><strong>POSTE_DUPLO_T_PROPOSTO</strong> — Poste Duplo T Proposto</li>
+      </ul>
+      <h4>Postes existentes — cor branca / preta (7)</h4>
+      <ul>
+        <li><strong>POSTE_CIRCULAR_EXISTENTE</strong> — Poste Circular Existente</li>
+        <li><strong>POSTE_DUPLO_T_EXISTENTE</strong> — Poste Duplo T Existente</li>
+      </ul>
+      <h4>Demais camadas</h4>
+      <ul>
         <li><strong>TRANSFORMADOR</strong> — cor ciana (4). Transformadores marcados no projeto</li>
         <li><strong>PONTOS</strong> — cor branca (7). Pontos genéricos</li>
         <li><strong>REDE_NOVA</strong> — linhas tracejadas conectando os postes</li>

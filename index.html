@@ -192,7 +192,7 @@ footer{border-top:1px solid var(--borda);padding:44px 0 40px}
       <div class="feat reveal">
         <div class="ficon" style="background:rgba(56,189,248,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 6l8-3 8 3v12l-8 3-8-3z" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linejoin="round"/><path d="M12 3v18" stroke="#38BDF8" stroke-width="2"/></svg></div>
         <h3>Rede existente no mapa</h3>
-        <p>Importe o KML da concessionária e veja postes, chaves e transformadores sobre a imagem de satélite enquanto trabalha.</p>
+        <p>Importe KML da concessionária ou carregue a rede da BDGD (ANEEL) direto no mapa — 23 distribuidoras disponíveis, sem precisar de arquivo.</p>
       </div>
       <div class="feat reveal">
         <div class="ficon" style="background:rgba(245,158,11,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M3 21L21 3M8 4H4v4M20 16v4h-4" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -213,6 +213,16 @@ footer{border-top:1px solid var(--borda);padding:44px 0 40px}
         <div class="ficon" style="background:rgba(56,189,248,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M9 20l-5-3V5l5 3m0 12l6-3m-6 3V8m6 9l5-3V4l-5 3m0 10V7m-6 1l6-3" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linejoin="round"/></svg></div>
         <h3>Mapa offline na obra</h3>
         <p>Ao importar a obra, o satélite da área é baixado. Em campo sem sinal, o mapa continua funcionando.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ficon" style="background:rgba(251,146,60,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="#FB923C" stroke-width="2" stroke-linejoin="round"/></svg></div>
+        <h3>Notas de campo</h3>
+        <p>Adicione textos ou use o microfone para ditar observações diretamente no mapa. As notas ficam salvas no projeto com coordenada e data.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ficon" style="background:rgba(245,158,11,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1" fill="none" stroke="#F59E0B" stroke-width="2"/><path d="M3 3l18 18M21 3L3 21" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3>Tipos de poste</h3>
+        <p>Marque Poste Circular ou Duplo T, na versão Proposto ou Existente. Cada tipo tem símbolo próprio no mapa, na lista e no arquivo DXF exportado.</p>
       </div>
     </div>
   </div>
@@ -247,6 +257,33 @@ footer{border-top:1px solid var(--borda);padding:44px 0 40px}
       <div class="more-item"><div class="mi"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M4 7h4l2-2h4l2 2h4v13H4z" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="#F59E0B" stroke-width="2"/></svg></div><span>Registro fotográfico georreferenciado</span></div>
       <div class="more-item"><div class="mi"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M3 21L21 3M8 4H4v4M20 16v4h-4" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Medição de vãos e distâncias</span></div>
       <div class="more-item"><div class="mi"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M5 3h14v18H5z" fill="none" stroke="#10B981" stroke-width="2" stroke-linejoin="round"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#10B981" stroke-width="2" stroke-linecap="round"/></svg></div><span>Geração de croqui de campo</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="bdgd" style="background:var(--sup2,#0d1f33)">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:660px;margin:0 auto;text-align:center">
+      <span class="eyebrow">BDGD — Base de Dados Geográfica da Distribuidora</span>
+      <h2 style="margin-top:12px">Rede existente da concessionária direto no app.</h2>
+      <p style="color:var(--texto2,#94a3b8);margin-top:12px">A BDGD é publicada anualmente pela ANEEL e contém toda a rede de distribuição de MT do Brasil. No Markfield, você carrega a rede de qualquer alimentador sem precisar de arquivo — seleciona a distribuidora, escolhe o alimentador e as linhas aparecem no mapa como referência para o seu projeto.</p>
+    </div>
+    <div class="feat-grid reveal" style="margin-top:40px">
+      <div class="feat">
+        <div class="ficon" style="background:rgba(56,189,248,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="none" stroke="#38BDF8" stroke-width="2"/><circle cx="12" cy="9" r="2.5" fill="#38BDF8"/></svg></div>
+        <h3>23 distribuidoras disponíveis</h3>
+        <p>Elektro, CEMIG, CPFL, Enel SP, Copel, Coelba, Equatorial, Energisa, CEEE e outras. Cobertura de aproximadamente 65% do país.</p>
+      </div>
+      <div class="feat">
+        <div class="ficon" style="background:rgba(16,185,129,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Por alimentador (CTMT)</h3>
+        <p>Selecione a subestação e o alimentador. Somente as linhas e transformadores daquele CTMT são carregados — rápido e sem sobrecarregar o mapa.</p>
+      </div>
+      <div class="feat">
+        <div class="ficon" style="background:rgba(245,158,11,.14)"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="#F59E0B" stroke-width="2"/></svg></div>
+        <h3>Mais distribuidoras em breve</h3>
+        <p>Light (RJ), Enel RJ, Neoenergia PE / CE / DF / RN e outras ~12 distribuidoras ainda não processadas estão chegando nas próximas atualizações.</p>
+      </div>
     </div>
   </div>
 </section>
